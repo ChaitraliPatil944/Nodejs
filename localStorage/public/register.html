@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <h1>Welcome To The Register Page</h1>
+        <a href="index.html">Home &nbsp; </a>
+        <a href="login.html">Login &nbsp; </a>
+        <a href="register.html">Register &nbsp; </a>
+        <hr>
+        <h2>Choose option</h2>
+        <hr>
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password" autocomplete="new-password"><br>
+        <button type="submit" id="myBtn" onclick="registerUser()">Register</button>
+        <p id="para"></p>
+git remote add origin https://github.com/USERNAME/REPO_NAME.git
+
+        <script>
+            function registerUser() {
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                if(typeof(Storage) !== "undefined") {
+                    var valid_user={
+                        username: username,
+                        password: password
+                    };
+                    localStorage.setItem("valid_user", JSON.stringify(valid_user));
+                    document.getElementById("para").innerHTML="User Registered Successfully";
+
+                }
+                else {
+                    document.getElementById("para").innerHTML="Web Storage not supported";
+                }
+
+            }
+            
+        </script>
+    </body>
+</html>

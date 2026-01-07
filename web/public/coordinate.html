@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Transflower Flower</title>
+    </head>
+
+    <body>
+        <h1>Online Flower Shop</h1>
+
+        <a href="/">Home</a> | <a href="/about.html">About us</a> | <a href="/contact.html">Contact us</a> | <a href="/login.html">Sign In</a>
+    <hr/>
+        <h3>Mouse coordinates:</h3>
+        <!-- use of mousemove and mouseout events -->
+        <button id="myButton">click me</button>
+        <p id="coord">Move the mouse over the button</p>
+        <script>
+            var button=document.getElementById("myButton");
+        
+            var coord=document.getElementById("coord");
+
+
+            button.addEventListener("mousemove",function(event){
+                var x=event.clientX;
+                var y=event.clientY;
+                coord.innerHTML="X: "+x+" , Y: "+y;
+            });
+
+            document.addEventListener("mousemove",function(event){
+                var x=event.clientX;
+                var y=event.clientY;
+                coord.innerHTML="X: "+x+" , Y: "+y;
+            });
+
+            button.addEventListener("mouseout",function(){
+                coord.innerHTML="Move the mouse over the button";
+            });
+        </script>        
+    </body>
+
+</html>

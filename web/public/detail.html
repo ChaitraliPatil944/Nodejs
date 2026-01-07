@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Transflower Flower</title>
+    </head>
+
+    <body>
+        <h1>Online Flower Shop</h1>
+
+        <a href="/">Home</a> | <a href="/about.html">About us</a> | <a href="/contact.html">Contact us</a> | <a href="/login.html">Sign In</a>
+    <hr/>
+        <input type="text" placeholder="Enter name" id="userName"/>
+        <br/>
+        <input type="text" placeholder="name@gmail.com" id="userEmail"/>
+        <br/>
+        <h4>Details of user</h4>
+        <p id="para">
+            Details are:
+        </p>
+        <button onclick="onDetailSubmit()">Submit Details</button>
+
+        <script>
+            var onDetailSubmit=function(){
+                var name=document.getElementById("userName").value
+                var email=document.getElementById("userEmail").value
+                var para=document.getElementById("para")
+                para.innerHTML="Details are: <br/> Name: "+name+" <br/> Email: "+email
+
+                }
+        </script>
+    </body>
+
+</html>
