@@ -1,4 +1,4 @@
-
+//code for reading file 
 
 var fs=require("fs");
 var filename="./data/chait.txt";
