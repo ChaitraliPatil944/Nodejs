@@ -1,3 +1,5 @@
+//code for write 
+
 var fs=require("fs");
 var filePath="./result.txt";
 
