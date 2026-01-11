@@ -1,3 +1,14 @@
-#dependencies
+# Ignore node dependencies everywhere
 node_modules/
-npm-debug.log
+
+# Env files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
