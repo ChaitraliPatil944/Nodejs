@@ -1,6 +1,6 @@
 //code for reading file 
 
-var fs=require("fs");
+var fs=require("fs");//file system
 var filename="./data/chait.txt";
 
 var onFileRead=function(err,data){
