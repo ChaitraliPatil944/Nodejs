@@ -45,6 +45,8 @@
                     //  2nd parameter is always callback function which will be invoked on recived response from server REST API
                     // $ is to get and get is ajax function
 
+
+                    //client side code to make a call to server side REST API and get the data from server and print it on console of browser
                     $.get("/api/flowers", function(data, status){
                     //alert("Data : " + JSON.stringify(data) + "\nStatus : " + status);
                     for(var i=0; i<data.length ; i++){

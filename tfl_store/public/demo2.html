@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Catalog</title>
+        <script src="script/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <button>Send Data</button>
+
+
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    // alert("Button Clicked");
+                    //send data to restapi 
+
+                    var newCustomer={
+                        "id": 45,
+                        "firstname":"Chait",
+                        "lastname":"Patil",
+                        "email":"chaitpatil@gmail.com",
+                        "contact": 1234567890
+                    };
+
+                    let url = "/api/register"
+                    $.post(url, newCustomer, function(){
+                        console.log("data is posted to server");
+                    })
+                    
+                })
+            })
+        </script>
+    </body>
+</html>
